@@ -33,7 +33,7 @@ components:
       properties: {text: 'Feedback:', tooltip: enter feedback}
       type: Label
     - layout_properties: {grid_position: 'GCXCDJ,YPWLMN WPTWVV,FVXZLF'}
-      name: EVIL_feedback_box
+      name: feedback_box
       properties: {tooltip: place feedback here}
       type: TextArea
     - layout_properties: {grid_position: 'YRARCG,GTDIAI'}
