@@ -12,6 +12,10 @@ class FeedbackFormForNothing(FeedbackFormForNothingTemplate):
 
     # Any code you write here will run before the form opens.
 
+  def clear_inputs(self):
+    self.name_box.text = ""
+    self.
+  
   @handle("submit_button", "click")
   def submit_button_click(self, **event_args):
     name = self.name_box.text
