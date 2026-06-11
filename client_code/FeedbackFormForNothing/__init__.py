@@ -11,10 +11,6 @@ class FeedbackFormForNothing(FeedbackFormForNothingTemplate):
     super().__init__(**properties)
 
     # Any code you write here will run before the form opens.
-
-  def clear_inputs(self):
-    self.name_box.text = ""
-    self.email_box.text = ""
   
   @handle("submit_button", "click")
   def submit_button_click(self, **event_args):
@@ -24,4 +20,10 @@ class FeedbackFormForNothing(FeedbackFormForNothingTemplate):
     anvil.server.call('add_feedback', name, email, feedback)
     alert("YOU clicked the button.... Bad idea...")
     Notification("Feedback submitted!").show()
+    self.clear_inputs()
     pass
+
+  def clear_inputs(self):
+    self.name_box.text = ""
+    self.email_box.text = ""
+    self.feedback_box.text = ""
