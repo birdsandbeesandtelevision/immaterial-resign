@@ -14,7 +14,7 @@ class FeedbackFormForNothing(FeedbackFormForNothingTemplate):
 
   def clear_inputs(self):
     self.name_box.text = ""
-    self.
+    self.email_box.text = ""
   
   @handle("submit_button", "click")
   def submit_button_click(self, **event_args):
