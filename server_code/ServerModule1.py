@@ -18,9 +18,8 @@ import anvil.server
 
 @anvil.server.callable
 def add_feedback(name, email, feedback):
-    app_tables.feedback.add_row()
-      name = name,
-      email = email,
-      feedback = feedback,
-      created = datetime.now()
-)
+  app_tables.feedback.add_row()
+  name = name,
+  email = email,
+  feedback = feedback,
+  created = datetime.now()
